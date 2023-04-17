@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <meta http-equiv="refresh" content="5">
+
+<head>
+    <title>Received MQTT Messages</title>
+</head>
+
+<body>
+    <h1>Received MQTT Messages</h1>
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    <p><a href="/">Back to Send Message</a></p>
+</body>
+
+</html>

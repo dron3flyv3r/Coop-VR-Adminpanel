@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="../static/index.css">
+<meta http-equiv="refresh" content="2">
+
+<head>
+    <title>MQTT Message Sender</title>
+</head>
+
+<body>
+    <div class="app">
+        <div class="map">
+            <h1>Map:</h1>
+            <div class="allTiles">
+                {% for tile in tiles %}
+                <div class="tileLine">
+                    {% for ti in tile %}
+                    {% if ti %}
+                    <div class="tile" style="background-color: black;"> <br></div>
+                    {% else %}
+                    <div class="tile" style="background-color: transparent;"> <br></div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+            <img src="../static/map.png" alt="map">
+        </div>
+        <!-- make 5 buttons in a hectagel -->
+        <div class="controlpanel">
+            <h1>Control Panel:</h1>
+            <form method="post" action="/">
+                <div class="buttons">
+                    <button name="but" value="white" style="background-color: white; color: black;">White</button>
+                    <button name="but" value="red" style="background-color: red; color: black;">Red</button>
+                    <button name="but" value="blue" style="background-color: blue; color: black;">Blue</button>
+                    <button name="but" value="yellow" style="background-color: yellow; color: black;">Yellow</button>
+                    <button name="but" value="green" style="background-color: green; color: black;">Green</button>
+                    <button name="but" value="force">Force open door</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div class="appTest">
+        <h1>Testing</h1>
+        <form method="post" action="/">
+            <label for="message">Message:</label>
+            <input type="text" id="message" name="message">
+            <input type="submit" value="Send">
+        </form>
+        <p><a href="/messages">View Messages</a></p>
+    </div>
+</body>
+
+</html>
