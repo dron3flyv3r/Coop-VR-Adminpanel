@@ -27,3 +27,15 @@ setup er lavet til at installere alt hvad der skal bruges til at køre programme
 3. Åben en terminal i mappen med app.py og skriv `python app.py`
 4. Åben en browser og skriv `http://<ip-adresse>:5000/` i adresselinjen eller klik på linket i terminalen
 
+### Hvis du ikke kan finde ip-adressen
+1. Åben en terminal og skriv `arp -a`
+2. Find ip-adressen på Raspberry Pi'en
+3. Åben en browser og skriv `http://<ip-adresse>:5000/` i adresselinjen eller klik på linket i terminalen
+
+## Hvis du har problemer med setup.py eller app.py
+Kan du prøve at installere de nødvendie pakke manuelt
+1. Flask: `pip install flask`
+2. Paho: `pip install paho-mqtt`
+3. Numpy: `pip install numpy`
+4. Json: `pip install json`
+
